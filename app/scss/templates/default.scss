@@ -1,0 +1,91 @@
+// fonts
+@import url();
+
+// mixins
+
+// default
+body {
+	color: $black;
+	background-color: значение;
+	font-size: 16px;
+	font-family: $font-main;
+	font-weight: значение;
+}
+a {
+	color: black;
+	transition: color 0.2s ease-in;
+
+	&:hover {
+		color: значение;
+	}
+}
+
+.wrapper {
+	max-width: 1200px; // прибавляем padding
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 15px;
+}
+
+// Прижать footer
+body,
+html {
+	height: 100%;
+}
+.page {
+	min-height: 100%;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+main {
+	flex-grow: 1;
+}
+// reset
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:link,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+button {
+	border: none;
+}
+img {
+	max-width: 100%;
+}
+
+ul li {
+	list-style: none;
+}
+
+/* Скрывает крестик в IE */
+input::-ms-clear {
+	display: none;
+}
+
+input,
+button,
+optgroup,
+textarea,
+select {
+	color: inherit;
+	font-weight: inherit;
+}

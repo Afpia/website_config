@@ -1,0 +1,12 @@
+// templates
+@import './templates/normalize';
+@import "./templates/vars";
+@import "./templates/default";
+
+// block
+// @import "./blocks/header";
+
+@import "./blocks/*.scss";
+// @import "./blocks/footer";
+
+// libs

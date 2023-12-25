@@ -1,0 +1,94 @@
+.accordion {
+	&__title {
+		padding: 20px;
+		border: 1px solid transparent;
+		border-bottom: 1px solid #c28f8f;
+		transition: all 0.2s ease;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h2 {
+			color: black;
+			font-size: 18px;
+			font-family: sans-serif;
+			font-weight: 600;
+			margin: 0;
+		}
+		&:not(:first-child){
+			margin-top: -1px;
+		}
+		&:hover h2 {
+			color: #f04141;
+		}
+		&:hover {
+			border-bottom: 1px solid#f04141;
+			border-top: 1px solid#f04141;
+		}
+								&:hover span{
+			background-color: #f04141;
+				
+			}
+		span {
+			position: relative;
+			width: 30px;
+			height: 30px;
+			background-color: black;
+			border-radius: 50%;
+			transform: rotate(0deg);
+			transition: all 0.2s ease;
+
+		}
+		span::before {
+			content: "";
+			position: absolute;
+			height: 2px;
+			background: white;
+			top: 50%;
+			left: 50%;
+			width: 50%;
+			border-radius: 10px;
+			transform: translate(-50%, -50%);
+		}
+		span::after {
+			content: "";
+			position: absolute;
+			height: 50%;
+			background: white;
+			top: 50%;
+			left: 50%;
+			width: 2px;
+			border-radius: 10px;
+			transform: translate(-50%, -50%)
+		}
+		&.active span {
+			transform: rotate(45deg);
+		}
+	}
+	&__content {
+		padding: 0 20px;
+		font-family: sans-serif;
+		color: black;
+		background-color: #c28f8f;
+		transition: all 0.2s ease-in-out;
+		// overflow: hidden;
+		max-height: 0;
+		visibility: hidden;
+		opacity: 0;
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			// overflow: visible;
+			padding: 20px;
+		}
+	}
+	&__title:nth-child(1) {
+		border-top: 1px solid#c28f8f;
+		transition: all 0.2s ease;
+		&:hover {
+			color: #f04141;
+			border-top: 1px solid#f04141;
+		}
+	}
+}
+
+
